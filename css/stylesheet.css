@@ -1,0 +1,23 @@
+.testCon{
+	/*
+	background-color:	skyblue;
+	border:	1px solid blue;
+	*/
+	margin-top: 10px;
+}
+
+.testHeight{
+	height: 120px;
+}
+
+footer{
+	height: 300px;
+}
+
+.row{
+	border:1px solid gray;
+}
+
+.bgcolor{
+	background-color: skyblue;
+}

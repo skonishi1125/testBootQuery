@@ -7,14 +7,258 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <title>Hello, world!</title>
   </head>
   <body>
     <h1 class="text-success">Hello, world!</h1>
 
+    <div class="testCon container-fluid">
+      <div class="row">
+          <div class="col-sm-8">1列目</div>
+          <div class="col-sm-4">２列目</div>
+      </div>
+    </div>
+
+    <div class="testCon container">
+      <div class="row">
+          <div class="col-sm">1列目</div>
+          <div class="col-sm">２列目</div>
+          <div class="col-sm">３列目</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="testCon container-fluid">
+      <div class="row">
+          <div class="col">col</div>
+          <div class="col-auto">col-auto:コンテンツによって幅が可変する</div>
+          <div class="col">col</div>
+      </div>
+    </div>
+
+    <div class="testCon container-fluid">
+      <div class="row">
+          <div class="col">col</div>
+          <div class="col-md-auto">col-md-auto:Medium以上でコンテンツによって幅が可変する</div>
+          <div class="col">col</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="testCon container-fluid">
+      <div class="row">
+          <div class="col-2">col</div>
+          <div class="col-4">col</div>
+          <div class="w-100"></div>
+          <div class="col-5">col</div>
+          <div class="col-7">col</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h5>Medi以上で改行のw-100がdisplay:blockとなり改行される</h5>
+    <div class="testCon container-fluid">
+      <div class="row">
+          <div class="col">col</div>
+          <div class="col">col</div>
+          <div class="w-100 d-none d-md-block"></div>
+          <!-- Medi以上ではdis:block, 未満ではdis;noneとなる -->
+          <div class="col">col</div>
+          <div class="col">col</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h5>ベース：全幅+半幅カラム、medi以上で8列+4列</h5>
+    <div class="testCon container-fluid">
+      <div class="row">
+          <div class="col-12 col-md-8">col-12とcol-md-8</div>
+          <div class="col-6 col-md-4">col</div>
+      </div>
+    </div>
+
+    <br>  
+    <h5>ベース：半幅カラム*3、medi以上で4列*3</h5>
+    <div class="testCon container-fluid">
+      <div class="row">
+          <div class="col-6 col-md-4">col-6とcol-md-4</div>
+          <div class="col-6 col-md-4">col-6とcol-md-4</div>
+          <div class="col-6 col-md-4">col-6とcol-md-4</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h5>垂直上揃え align-items-start できない・・・</h5>
+    <div class="testCon testHeight container">
+      <div class="row align-items-start">
+          <div class="col">col</div>
+          <div class="col">col</div>
+          <div class="col">col</div>
+      </div>
+    </div>
+
+    <h5>垂直中央揃え align-items-center</h5>
+    <div class="testCon testHeight container">
+      <div class="row align-items-center">
+          <div class="col">col</div>
+          <div class="col">col</div>
+          <div class="col">col</div>
+      </div>
+    </div>
+
+    <h5>垂直下揃え align-items-end</h5>
+    <div class="testCon testHeight container">
+      <div class="row align-items-end">
+          <div class="col">col</div>
+          <div class="col">col</div>
+          <div class="col">col</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h5>2.4.3 水平並列 justify-content(これは効く)</h5>
+    <div class="testCon container">
+      <div class="row justify-content-start">
+          <div class="col-4">col</div>
+          <div class="col-4">col</div>
+      </div>
+    </div>
+
+    <div class="testCon container">
+      <div class="row justify-content-center">
+          <div class="col-4">col</div>
+          <div class="col-4">col</div>
+      </div>
+    </div>
+
+    <div class="testCon container">
+      <div class="row justify-content-around">
+          <div class="col-4">col</div>
+          <div class="col-4">col</div>
+      </div>
+    </div>
+
+    <hr>
+    <h5>no-guttersあり 左右のpadding 15pxが取り除かれる</h5>
+    <div class="testCon container">
+      <div class="row no-gutters">
+          <div class="col">col</div>
+          <div class="col">col</div>
+      </div>
+    </div>
+
+    <h5>no-guttersなし（普通）</h5>
+    <div class="testCon container">
+      <div class="row">
+          <div class="col">col</div>
+          <div class="col">col</div>
+      </div>
+    </div>
+
+    <h5>コンテナなし,no-guttersあり</h5>
+    <div class="row no-gutters">
+        <div class="col">col</div>
+        <div class="col">col</div>
+    </div>
+
+    <h5>コンテナなし,no-guttersなし</h5>
+    <div class="row">
+        <div class="col">col</div>
+        <div class="col">col</div>
+    </div>
+
+    <hr>
+
+    <h5>orderクラスで並び替え</h5>
+    <div class="container">
+      <div class="row">
+          <div class="col">カラム１ 順序指定なし</div>
+          <div class="col order-12">カラム２　順序指定12</div>
+          <div class="col order-1">カラム3　順序指定1</div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+      <div class="row">
+          <div class="col">カラム１ 順序指定なし</div>
+          <div class="col">カラム２　順序指定なし</div>
+          <div class="col order-first">カラム3　順序指定order-first</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h5>offset</h5>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-4">col-md-4</div>
+          <div class="col-md-4 offset-md-4">col-md-4 Medi以上で4列分左に移動</div>
+      </div>
+    </div>
+
+    <h5>offset-0</h5>
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-5 col-md-6 bgcolor">col-sm-5とcol-md-6</div>
+          <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0 bgcolor">
+            col-sm-5とoffset-sm-2とcol-md-6とoffset-md-0
+          </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h5>2.5.3 グリッドレイアウトの入れ子</h5>
+    <div class="container">
+      <div class="row">
+
+          <div class="col-sm-9 bgcolor">
+            <p>第1階層 sm9</p>
+              <div class="row">
+
+                <div class="col-8 col-sm-6">col8とcolsm6 col8とcolsm6 col8とcolsm6 col8とcolsm6 </div>
+                <div class="col-4 col-sm-6">col4とcolsm6 col4とcolsm6 col4とcolsm6 col4とcolsm6 </div>
+                
+              </div>
+          </div>
+
+          <div class="col-sm-3">
+            <p>第１階層 sm3</p>
+          </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+      
+    </footer>
+
+
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 
