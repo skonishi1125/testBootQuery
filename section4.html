@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>SECTION4</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-3">Jumbotron</h1>
+        <p class="lead">これはジャンボトロンのサンプルです。</p>
+        <!-- lead:記事のlead(要旨)のこと。 -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div>
+        <h1 class="display-3">Jumbotron</h1>
+        <p class="lead">ジャンボトロンを使わなかった場合です。</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-3">Jumbotron</h1>
+        <p class="lead">これはジャンボトロン-fluidのサンプルです。</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <p>alertクラス　エラ〜メッセージやフィードバックメッセージを出せる</p>
+    <div class="alert alert-success" role="alert">
+      成功時のアラートです
+    </div>
+    <div class="alert alert-danger" role="alert">
+      エラーが発生しました。・・・の他にいろんな色があります 4.2.1
+    </div>
+    <div class="alert alert-warning" role="alert">
+      alert-linkで、<a href="#" class="alert-link">リンク先</a>も貼れるよ
+    </div>
+    <div class="alert alert-primary" role="alert">
+      <h4 class="alert-heading">見出しもつけられます</h4>
+      <p>段落１</p>
+      <hr>
+      <p class="mb-0">アラート内の段落(mb-0クラス margin-bottom:0)をつけて下の余白を少し消しています</p>
+    </div>
+
+    <p>アラートをマウスで閉じられるようにする</p>
+    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+        右のxをクリックすると閉じるよ
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <!-- aria-label:コーダーに伝わる注釈的なもの -->
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <hr>
+    <p>4.3.1 バッジをつける</p>
+    <h1>h1 <span class="badge badge-primary">primary</span></h1>
+    <p>すごい</p>
+    <h5><span class="badge badge-success">お知らせ</span>同窓会の開催について</h5>
+    <h5><span class="badge badge-danger">重要</span>卒業式の開催日程について</h5>
+
+    <p>4.3.2 バッジにカウンターをつける</p>
+    <button type="button" class="btn btn-primary">
+      button <span class="badge badge-light">292049</span>
+    </button>
+
+    <p>アクション付きのバッジも作れる</p>
+    <a href="#" title="" class="badge badge-success">
+      a要素にbadgeクラスをつけるとホバー時にアクションが起こる
+    </a>
+
+    <p>4.4.7 プログレスバー</p>
+    <div class="container">
+      <div class="progress mb-3">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:45%">
+        </div>
+      </div>
+    </div>
+
+    <p>4.5 カード要素</p>
+    <div class="card text-white bg-primary ml-5" style="max-width: 25rem;">
+      <img src="img/obake.png" class="card-img-top">
+      <div class="card-body">
+        <h4 class="card-title">カードの見出し</h4>
+        <h6 class="card-subtitle">副見出し</h6>
+        <p class="card-text">カードの内容が入ります。カードの内容が入ります。カードの内容が入ります。</p>
+        <a href="#" class="btn btn-primary">ボタン</a>
+        <hr>
+        <img src="img/obake.png" class="card-img-bottom">
+        <p class="card-text">画像の説明</p>
+      </div>
+    </div>
+
+    <p>4.5.3 グリッドレイアウトに組み込む</p>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6">
+          <div class="card bg-warning">
+            <div class="card-body">
+              <h4 class="card-title">見出し</h4>
+              <img src="img/obake.png" class="card-img-bottom">
+              <p class="card-text">お化けです。</p>
+              <a href="#" class="btn btn-primary">ボタン</a>              
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="card bg-success">
+            <div class="card-body">
+              <h4 class="card-title">見出しその２</h4>
+              <img src="img/obake.png" class="card-img-bottom">
+              <p class="card-text">お化けです。</p>
+              <a href="#" class="btn btn-primary">ボタン</a>              
+            </div>
+          </div>
+        </div>        
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        
+        <div class="card w-10">
+            <div class="card-body">
+              <h4 class="card-title">見出しその２</h4>
+              <p class="card-text">お化けです。</p>
+              <a href="#" class="btn btn-primary">ボタン</a>              
+            </div>          
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/obake.png" class="card-img">
+      <div class="card-img-overlay">
+        <h4>カードの見出し</h4>
+        <p>内容文が入ります。</p>
+        <p>内容文が入ります。</p>
+        <p>内容文が入ります。</p>
+        <p>内容文が入ります。</p>
+        <p>内容文が入ります。</p>
+        <p>内容文が入ります。</p>
+        <p>内容文が入ります。</p>
+      </div>
+    </div>
+
+    <hr>
+    <p>メディアオブジェクト</p>
+
+    <div class="media">
+      <img src="img/obake.png" class="mr-3 ml-3 mb-2 border" width="70">
+      <div class="media-body">
+        <h5>mediaオブジェ</h5>
+        <p>コメント文です。ダミーの文章を入力させていただいています。</p>
+      </div>
+    </div>
+    <div class="media">
+      <img src="img/obake.png" class="mr-3 ml-3 border" width="70">
+      <div class="media-body">
+        <h5>お化けが大きいと</h5>
+        <p>うまく表示されないかも・・・！</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <footer>
+      
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
