@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>sec5</title>
+  </head>
+  <body>
+
+    <p>5.1.1 なび</p>
+    <div>
+      <ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link">リンクだよ</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">activeリンクだよ</a></li>
+        <li class="nav-item"><a href="#" class="nav-link disabled">disabledリンクだよ</a></li>
+      </ul>
+    </div>
+
+    <p>nav要素を利用する</p>
+    <nav class="nav border flex-column"><!-- クラスを忘れないように -->
+      <a href="#" class="nav-link">リンクだよ</a>
+      <a href="#" class="nav-link active">リンクだよ</a>
+      <a href="#" class="nav-link disabled">リンクだよ</a>
+    </nav>
+
+    <p>色々なnav</p>
+    <nav class="nav border nav-pills"><!-- クラスを忘れないように -->
+      <a href="#" class="nav-link active">リンクだよ</a>
+      <a href="#" class="nav-link">リンクだよ</a>
+      <a href="#" class="nav-link disabled">リンクだよ</a>
+    </nav>
+
+    <div class="container">
+      <nav class="nav border nav-pills nav-fill"><!-- クラスを忘れないように -->
+        <a href="#" class="nav-link active">リンクだよ</a>
+        <a href="#" class="nav-link">リンクだよ</a>
+        <a href="#" class="nav-link disabled">リンクだよ</a>
+      </nav>
+    </div>
+
+    <hr>
+    <hr>
+
+    <h4>5.1.4 ドロップダウンなび</h4>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">active</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ドロップダウン</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">リンク１</a>
+          <a class="dropdown-item" href="#">リンク２</a>
+          <a class="dropdown-item" href="#">リンク３</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">その他のリンク</a>
+        </div>
+      </li> 
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">リンク</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">リンク(無効)</a>
+      </li>
+    </ul>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+
+    <h3>押したら押したページが非同期で出る処理</h3>
+
+    <div class="container">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">ホーム</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">プロフィール</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="home" aria-selected="false">コンタクト</a>
+        </li>
+
+      </ul>
+
+      <div class="tab-content mt-3" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          ホームコンテンツが入ります
+        </div>
+
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          プロフィールコンテンツが入ります
+        </div>
+
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+          コンタクトのコンテンツが入ります
+          
+        </div>
+
+      </div>
+
+    </div>
+
+    <hr>
+    <h3>ページネーション</h3>
+
+    <nav aria-label="ページネーション例">
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="#">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">前へ</span>
+        </a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">次へ</span>
+        </a></li>
+      </ul>
+
+    </nav>
+
+    <hr>
+
+    <h3>ボタン非同期</h3>
+    <button type="button" class="btn btn-primary" aria-pressed="true" autocomplete="off" id="toggle-btn">推してね</button>
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+      
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      $("#toggle-btn").on('click',function(){
+        $(this).button('toggle').text('押したね');
+      })
+    </script>
+
+  </body>
+</html>
